@@ -7,16 +7,20 @@ loadlive2d("piojs", "./piojs/models/pio/default.json");
 $(document).ready(function(){
     var pioCanvas=$('#piojs')[0];
     pioCanvas.onmousedown=function(e){
-        var offsetX=e.offsetX;   
-        var windowWidth=$(window).width();
+        var offsetX=e.offsetX; //鼠标于元素内X轴
+        var windowWidth=$(window).width(); //屏幕宽度
+
         document.onmousemove=function(e){
-            var clientX=e.clientX;
-            pioCanvas.style.left=clientX-offsetX+"px";
-            if(pioCanvas.offsetLeft<0){
+            var clientX=e.clientX; //鼠标位于屏幕X轴
+
+            if(Number(clientX-offsetX)<0){ //防出左界
                 pioCanvas.style.left=0;
             }
-            else if(pioCanvas.offsetLeft+pioCanvas.offsetWidth>windowWidth){
+            else if(Number(clientX-offsetX)+pioCanvas.offsetWidth>windowWidth){ //防出右界
                 pioCanvas.style.left=windowWidth-pioCanvas.offsetWidth+"px";
+            }
+            else{
+                 pioCanvas.style.left=clientX-offsetX+"px";
             }
         };
         document.onmouseup=function(e){
