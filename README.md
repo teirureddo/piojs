@@ -1,0 +1,3 @@
+# Pio.js
+
+这是一个自动加载可爱的Pio以及其他Live2D模型的JavaScript脚本
