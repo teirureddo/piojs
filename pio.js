@@ -27,5 +27,5 @@ $(document).ready(function(){
             document.onmousemove = null;
             document.onmouseup = null;
         };
-    }
+    };
 });

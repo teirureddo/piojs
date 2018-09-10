@@ -1,5 +1,7 @@
 # Pio.js
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/4b2d2dc2a98b4a21abab8adf3d5aadf9)](https://www.codacy.com/app/teirureddo/piojs?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=teirureddo/piojs&amp;utm_campaign=Badge_Grade)
+
 这是一个自动加载可爱的Pio以及其他Live2D模型的JavaScript脚本
 
 目前仍在开发中...
