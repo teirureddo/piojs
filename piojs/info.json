@@ -1,0 +1,9 @@
+[
+  {"model":"./piojs/models/pio/default-costume.json","width":"280","height":"250"},
+  {"model":"./piojs/models/pio/animal-costume-racoon.json","width":"280","height":"250"},
+  {"model":"./piojs/models/pio/animal-costume.json","width":"280","height":"250"},
+  {"model":"./piojs/models/pio/bunny-girl-costume-red.json","width":"280","height":"250"},
+  {"model":"./piojs/models/pio/bunny-girl-costume.json","width":"280","height":"250"},
+  {"model":"./piojs/models/pio/cake-costume-choco.json","width":"280","height":"250"},
+  {"model":"./piojs/models/pio/cake-costume-cream.json","width":"280","height":"250"}
+]
