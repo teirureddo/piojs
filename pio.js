@@ -15,7 +15,7 @@ $(document).ready(function(){
     if (!localStorage.getItem("pioLeft")){
         localStorage.setItem("pioLeft", "0px");
     }
-    pioCanvas.style.left=localStorage.getItem('pioLeft');
+    pioCanvas.style.left=localStorage.getItem("pioLeft");
 
     pioCanvas.onmousedown=function(e){
         var offsetX=e.offsetX; //鼠标于元素内X轴
