@@ -4,23 +4,29 @@ $("body").append("<canvas style='position:fixed;bottom:0;left:0;z-index:999;' id
 $(document).ready(function(){
     var pioCanvas=$("#piojs")[0];
 
-    //加載模型
-    $.getJSON("./piojs/info.json",function(data){
-      var dataRandID = (Math.ceil(Math.random() * (data.length)) - 1)
-
-      $("#piojs").width = data[dataRandID].width;
-      $("#piojs").height = data[dataRandID].height;
-
-      loadlive2d("piojs", data[dataRandID].model);
-    });
- 
+    if (!localStorage.getItem("pioConf")){
+        $.getJSON("./piojs/info.json",function(data){
+          var dataRandID = (Math.ceil(Math.random() * (data.length)) - 1);
+          console.log(data[dataRandID].model);
+          localStorage.setItem("pioConf", JSON.stringify(data[dataRandID]));
+          $("#piojs").width = data[dataRandID].width;
+          $("#piojs").height = data[dataRandID].height;
+          loadlive2d("piojs", data[dataRandID].model);
+        });
+    }
+    else {
+        var pioConf;
+        pioConf = JSON.parse(localStorage.getItem("pioConf"));
+        $("#piojs").width = pioConf.width;
+        $("#piojs").height = pioConf.height;
+        loadlive2d("piojs", pioConf.model);
+    }
 
     //初始化Pio位置记录
     if (!localStorage.getItem("pioLeft")){
         localStorage.setItem("pioLeft", "0px");
     }
     pioCanvas.style.left=localStorage.getItem("pioLeft");
-
 
     //使canvas可以移动
     pioCanvas.onmousedown=function(e){
