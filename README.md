@@ -22,7 +22,7 @@
 
 模型转载于fghrsh/live2d_api，为制作者所有，不得用于商业用途
 
-如您認為模型内容侵犯您的版权请联络Twitter的 @teirureddo 删除
+如您认为模型内容侵犯您的版权请提issue删除
 
 ----
 GPLv2 © Teirureddo
